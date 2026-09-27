@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  background: #050816;
+  font-family: Arial, sans-serif;
+}
+
+.lab-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  background: #091122;
+  border-bottom: 2px solid cyan;
+}
+
+.toolbar-btn {
+  background: #101d35;
+  color: cyan;
+  border: 1px solid cyan;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.toolbar-btn:hover {
+  box-shadow: 0 0 15px cyan;
+}
+
+.main-layout {
+  flex: 1;
+  display: flex;
+}
+
+.workspace {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadboard {
+  width: 85%;
+  height: 400px;
+
+  background: linear-gradient(
+    to bottom,
+    #f2f2f2,
+    #d7d7d7
+  );
+
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 25px cyan;
+}
+
+.component-card {
+  margin-top: 20px;
+
+  padding: 20px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  color: black;
+}
+
+.properties {
+  width: 300px;
+
+  background: #0d1427;
+
+  color: white;
+
+  padding: 20px;
+
+  border-left: 2px solid cyan;
+}
+
+.properties h2 {
+  color: cyan;
+}
+
+.properties input {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.delete-btn {
+  width: 100%;
+  padding: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.guide-panel {
+  background: #091122;
+  color: white;
+  padding: 15px;
+  border-top: 2px solid cyan;
+}

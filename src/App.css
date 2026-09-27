@@ -1,0 +1,364 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050816;
+  color: white;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================================
+   HOME / MAIN APP
+========================================= */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-title {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  line-height: 1.2;
+
+  background: linear-gradient(
+    90deg,
+    #00e5ff,
+    #00ff95
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 30px #00e5ff;
+}
+
+.tagline {
+  text-align: center;
+  margin-top: 15px;
+  color: #b0c4ff;
+  font-size: 1.2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 50px;
+  margin-top: 80px;
+}
+
+.mode-card {
+  width: 340px;
+  height: 420px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(18px);
+
+  border-radius: 25px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  transition: 0.4s;
+
+  cursor: pointer;
+}
+
+.mode-card:hover {
+  transform:
+    translateY(-15px)
+    rotateX(10deg);
+
+  box-shadow:
+    0 0 40px #00e5ff;
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 25px;
+}
+
+.mode-card h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.mode-card p {
+  color: #d0d8ff;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   NORMAL BUTTONS
+========================================= */
+
+button {
+  margin-top: 35px;
+
+  border: none;
+
+  padding: 14px 25px;
+
+  border-radius: 30px;
+
+  background: linear-gradient(
+    90deg,
+    #00e5ff,
+    #00ff95
+  );
+
+  color: black;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.background-grid {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   CREATE CIRCUIT — MAIN PAGE
+========================================================= */
+
+.circuit-page {
+  width: 100vw;
+  height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #101c30 0%,
+      #07101c 45%,
+      #030712 100%
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP TOOLBAR
+========================================================= */
+
+.circuit-toolbar {
+  width: 100%;
+
+  min-height: 96px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(17, 31, 50, 0.98),
+      rgba(8, 18, 31, 0.98)
+    );
+
+  border-bottom:
+    1px solid rgba(0, 229, 255, 0.18);
+
+  box-shadow:
+    0 4px 25px rgba(0, 0, 0, 0.45);
+
+  overflow-x: auto;
+
+  z-index: 20;
+
+  scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   TOOLBAR BUTTONS
+========================================================= */
+
+.circuit-toolbar .tool-btn {
+  margin-top: 0;
+
+  min-width: 135px;
+
+  height: 70px;
+
+  padding: 8px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(35, 52, 73, 0.95),
+      rgba(18, 30, 47, 0.95)
+    );
+
+  color: #ffffff;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* TOOLBAR HOVER */
+
+.circuit-toolbar .tool-btn:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(29, 67, 91, 1),
+      rgba(20, 42, 61, 1)
+    );
+
+  border-color:
+    rgba(0, 229, 255, 0.65);
+
+  box-shadow:
+    0 0 20px rgba(0, 229, 255, 0.18);
+}
+
+
+/* TOOLBAR ACTIVE */
+
+.circuit-toolbar .tool-btn:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 0 10px rgba(0, 229, 255, 0.25);
+}
+
+
+/* ICON */
+
+.tool-icon {
+  font-size: 23px;
+
+  line-height: 1;
+
+  display: block;
+}
+
+
+/* =========================================================
+   3D WORKSPACE
+========================================================= */
+
+.circuit-workspace {
+  flex: 1;
+
+  width: 100%;
+
+  min-height: 0;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   MOBILE / SMALL SCREEN
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .circuit-toolbar {
+    min-height: 85px;
+
+    gap: 8px;
+
+    padding: 10px;
+  }
+
+  .circuit-toolbar .tool-btn {
+    min-width: 115px;
+
+    height: 64px;
+
+    font-size: 12px;
+  }
+
+  .tool-icon {
+    font-size: 20px;
+  }
+}
